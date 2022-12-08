@@ -1,7 +1,10 @@
 # PAPIF
 Code of Attention-guided Polarization Image Fusion Using Salient Information Distribution
 
-##Fused results:
+## Fused results:
+![](./figs/car.jpg)
+![](./figs/box.jpg)
+![](./figs/build1.jpg)
 
 
 ## To train:

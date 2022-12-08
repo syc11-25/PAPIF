@@ -16,3 +16,5 @@ python test.py
 ## Tips:
 ### For training:
 * [Training dataset](https://github.com/ymonno/EARI-Polarization-Demosaicking)
+
+If you have any question, please email to me (ycsunner@gmail.com).

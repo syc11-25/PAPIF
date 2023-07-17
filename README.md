@@ -20,6 +20,7 @@ python test.py
 ## Tips:
 ### For training:
 * [Training dataset](https://github.com/ymonno/EARI-Polarization-Demosaicking)
+* The pre-trained model is provided in the "model" folder.
 
 ## If this work is helpful to you, please cite it as:
 ```

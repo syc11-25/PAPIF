@@ -45,10 +45,17 @@ def rgb2ycrcb(img_rgb):
     G = torch.unsqueeze(img_rgb[:,1,:,:], dim=1)
     B = torch.unsqueeze(img_rgb[:,2,:,:], dim=1)
     Y = 0.299 * R + 0.587 * G + 0.114 * B
-    Cb = -0.1687 * R - 0.3313 * G + 0.5 * B + 128/255/255
-    Cr = 0.5 * R - 0.4187 * G - 0.0813 * B + 128/255/255
+    Cb = -0.1687 * R - 0.3313 * G + 0.5 * B + 128/255
+    Cr = 0.5 * R - 0.4187 * G - 0.0813 * B + 128/255
     # img_ycbcr = torch.cat([Y, Cr, Cb], 1)
     return Y, Cr, Cb
+
+def ycrcb2rgb(Y, Cr, Cb):
+    B = (Cb - 0.5) * 1. / 0.564 + Y
+    R = (Cr - 0.5) * 1. / 0.713 + Y
+    G = 1. / 0.587 * (Y - 0.299 * R - 0.114 * B)
+    rgb = torch.cat((R,G,B),1)
+    return rgb
 
 
 def entropy(image, width=480, height=640):
